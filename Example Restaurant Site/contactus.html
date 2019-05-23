@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>The Friendly Antler - Contact Us</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style type="text/css">
+form {
+margin: auto;
+width: 35%;
+padding: 18px 25px;
+background-color: #e5cea2;
+border-radius: 25px;
+}
+input {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 10px #cc3300;
+}
+.toggle {
+width: 10%;
+}
+.button {
+width: 30%;
+}
+label {
+color: #cc3300;
+}
+h2 {
+text-align: center;
+}
+#pass {
+background-color: #777887;
+}
+</style>
+</head>
+<body>
+<header>
+<img src="images/logo.jpg" alt="Friendly Antler Logo" width="200" height="134">
+<h1>Contact The Friendly Antler</h1>
+</header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="history.html">History</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+<li><a href="chef.html">Meet the Chef</a></li>
+<li><a href="nutritioninfo.html">Nutrition Info</a></li>
+</ul>
+</nav>
+<main>
+<h2>Tell Us What You Think</h2>
+<form action="" method="post" autocomplete="on">
+<label>First Name:</label>
+<input type="text" name="first_name" required>
+<label>Last Name:</label>
+<input type="text" name="last_name" required>
+<label>Email:</label>
+<input type="email" name="email" autocomplete="off" required>
+<label>Phone Number:</label>
+<input type="tel" name="phone">
+<label>Preferred Correspondence Method:</label>
+<select name="contactmethod">
+<option value="Phone">Phone</option>
+<option value="Text">Text</option>
+<option value="Email">Email</option>
+</select><br><br>
+<label>Sex:</label><br>
+<input class="toggle" type="radio" name="sex" value="male">Male<br>
+<input class="toggle" type="radio" name="sex" value="female">Female<br>
+<input class="toggle" type="radio" name="sex" value="Prefer Not to Say">Prefer Not to Say<br><br>
+<label>Comments:</label>
+<textarea name="comments" cols="50" rows="10"></textarea>
+<input class="toggle" type="checkbox" name="emailcorsp" value="sendemails">Subscribe for deals via email<br>
+<h2>Enter your four-digit passcode, then click OK:</h2>
+<input id="id1" type="number" min="1000" max="9999">
+<button onclick="myFunction()">OK</button>
+<p id="passcode"></p>
+<script>
+function myFunction() {
+var inpObj = document.getElementById("id1");
+if (inpObj.checkValidity() == false) {
+document.getElementById("passcode").innerHTML =
+inpObj.validationMessage;
+} else {
+document.getElementById("passcode").innerHTML = "Passcode Valid";
+}
+}
+</script>
+<input class="button" type="submit" value="Submit Form">
+<input class="button" type="reset" value="Reset Form">
+</form>
+<br>
+</main>
+<footer>
+<p>
+<a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="menu.html">Menu</a> | <a href="history.html">History</a> | <a href="contactus.html">Contact Us</a> | <a href="chef.html">Meet the Chef</a> | <a href="nutritioninfo.html">Nutrition Info</a>
+</p>
+</footer>
+</body>
+</html>
